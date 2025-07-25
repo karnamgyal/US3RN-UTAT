@@ -29,9 +29,8 @@ def get_patch_training_set(upscale_factor, patch_size):
 
 
 def get_test_set(upscale_factor):
-    root_dir = "/data/mq/data/CAVEdata/"
-    test_dir1 = join(root_dir, "test/X")
-    test_dir2 = join(root_dir, "test/Y")
+    test_dir1 = join("./test/X")
+    test_dir2 = join("./test/Y")
 
     return DatasetFromFolder2(test_dir1,test_dir2, upscale_factor, input_transform=input_transform())
 
